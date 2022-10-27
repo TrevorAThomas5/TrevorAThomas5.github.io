@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>I'm going on a <i id="time"></i> second walk.</h1>
+  </body>
+  <script>
+    let time_component = document.getElementById("time");
+
+    function setTime(the_time) {
+      if (the_time <= 0) return;
+      time_component.innerText = the_time;
+      the_time--;
+      setTimeout(() => setTime(the_time), 1000);
+    }
+
+    setTime(1200);
+  </script>
+</html>
