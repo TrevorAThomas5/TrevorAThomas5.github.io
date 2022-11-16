@@ -9,6 +9,12 @@
     function setTime(the_time) {
       if (the_time <= 0) return;
       time_component.innerText = the_time;
+
+      let red = Math.floor(Math.random() * 255);
+      let green = Math.floor(Math.random() * 255);
+      let blue = Math.floor(Math.random() * 255);
+      
+      time_component.style.color = `rgba(${red}, ${green}, ${blue}, 1)`;
       the_time--;
       setTimeout(() => setTime(the_time), 1000);
     }
